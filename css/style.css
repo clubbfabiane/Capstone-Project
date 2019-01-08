@@ -1,4 +1,5 @@
 
+/**old
 body {
     font-family: 'Galdeano', sans-serif;
     font-size: 1rem;
@@ -6,7 +7,7 @@ body {
     margin: 0 3% 0 3%;
   }
 
-  /**NAV*/
+  /**NAV*
 .container-nav{
     width: 100%;
     display: flex; 
@@ -37,30 +38,34 @@ nav > ul > li {
     padding: 10px;
   }
   
- /**HOME*/
+ /**HOME*
  
  .home-info{
      display: flex;
+     width:100%;
+     height: 100vh;
+     height: auto;
+     z-index: 0;
  }
- 
- .video{
-    width:50%;
-    height: auto;
-    z-index: 0;
+
+.video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
 }
 
 .logo-wrap{
     position: absolute;
     display: flex;
-    width: 100%;
     z-index:500;   
 }
 
 .logo{
-    justify-content: flex-start; 
+    align-content: flex-start;
     width: 20%; 
     height: 20%;  
-    margin-left: 20%;
+    margin-left: 100%;
     margin-top: 10%;
 }
 
@@ -71,13 +76,14 @@ nav > ul > li {
 .title-home{
     font-family: 'News Cycle', sans-serif;
     color:white;
-    position: relative;
-    font-size:6rem;
+    font-size:3rem;
+   
     font-weight:bold;
-    margin-top: 40px;
-    margin-left: 40px;
-    align-content: center;
+    justify-content: flex-start;
     z-index: 10;
+    top: 20%;
+    left: 0%;
+    margin:0;
 }
 
 .subtitle-wrap{
@@ -85,17 +91,15 @@ nav > ul > li {
 }
 
 .subtitle-home {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 75%;
-    margin-top: 60px;
-    transform: translate(-50%, -50%); /**WTF*/
-    z-index:500; /**is this even legal?*/
-    font-size: 22px;
     font-family: 'Galdeano', sans-serif;
     color: white;
+    font-size: 2rem;
+    position: absolute;
     width: 500px;
+    justify-content: flex-start;
+    top: 60%;
+    left:30%;
+    margin: 0;
 }
 
 .header-subtitle{
@@ -106,7 +110,7 @@ nav > ul > li {
     font-weight:normal;
 }
 
-/**PRODUCTS*/
+/**PRODUCTS*
 .div-feature{
     background:#707070; 
  } 
@@ -124,7 +128,7 @@ nav > ul > li {
     background: white;
 }
 
-/**SINGLE PRODUCT INFO*/
+/**SINGLE PRODUCT INFO*
 .feature-single-product{
     background:#707070;
 }
@@ -138,7 +142,7 @@ nav > ul > li {
     width: 60%;
 }
 
-/**ABOUT ME*/
+/**ABOUT ME*
 
 .p-about{
     float: left;
@@ -153,7 +157,7 @@ nav > ul > li {
     padding: 2%;
 }
 
-/*CONTACT*/
+/*CONTACT*
 .social-media-row{
    clear: both;
     background: #d1e0e0;
@@ -167,6 +171,171 @@ nav > ul > li {
     flex-direction: row;
     justify-content: space-around;  
 }
+**/
+
+body, html{
+    height: 100%;
+    margin-top: 0;
+    margin: 0, 1%;
+    font-family: 'Staatliches', cursive;
+    line-height: 1.5em;
+    text-align: left;
+}
+
+.logo-wrap{
+    display: flex;  
+}
+
+.logo{
+    justify-content: center;
+    margin-top: 15%;
+    margin-left: 60%;
+    width: 45%; 
+    height: 40%;    
+}
+
+.container-nav{
+    width: 100%;
+    display: flex; 
+    margin-top: 20px;
+    justify-content: flex-end;
+}
+
+nav{
+    
+    color: white;
+    font-size: 0.9rem;
+    list-style: none;
+    position:fixed;
+    background-color:transparent;
+    z-index: 2;
+}
+
+nav a:hover{
+    text-decoration: none;
+    display: block;
+    color: white;
+}
+
+nav > ul > li {
+    position: relative;
+    display: inline;
+    list-style: none;
+    padding: 10px;
+  }
+
+.parallax1{
+    background: url(../img/printer.jpg);
+    min-height: 100%;
+    display: flex;
+    top: 0;
+} 
+
+.heading{
+    color: #fff;
+    position: absolute;
+    font-family: 'Anton', sans-serif;
+    text-align: center;
+    font-size: 4.5rem;
+    margin-top: 20%;
+    margin-left: 30%;
+    text-transform: uppercase;
+    text-shadow: 0 0 5px #000;
+}
+
+.heading-sm{
+    position: absolute;
+    font-size: 1.2rem;
+    text-shadow: 0 0 10px #000;
+    margin-top: 7%;
+    font-weight: normal;
+    justify-content: center;
+}
+
+.parallax2{
+    background: url(../img/dinos.jpg);
+    min-height: 60%;
+}   
+
+.heading-sm-dino{
+    position: absolute;
+    color: white;
+    font-size: 4rem;
+    text-shadow: 0 0 10px #000;
+    margin-top: 7%;
+    margin-left: 10%;
+    font-weight: normal;
+    justify-content: center;
+}
+
+.parallax3{
+    background: url(../img/spools.jpg);
+    min-height: 60%;
+}   
+
+.mike-img{
+    size: 100px;
+}
+.parallax4{
+    min-height: 100%;
+}   
+
+.parallax1, .parallax2, .parallax3, .parallax4{
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.two-col{
+    float: left;
+    width: 42%;
+    padding: 0 4%;
+    text-align: left;
+}
+
+section{
+    overflow: auto;
+    padding: 20%, 50%; 
+}
+
+.dark{
+    overflow: auto;
+    padding: 50px, 80px;
+    background-color: #323232;
+    color: #ccc;
+}
+
+.social-media-row{
+    clear: both;
+    flex-direction: row;
+ }
+ 
+ .img-social-media{
+     width: 6%;
+     height: 6%;
+     padding: 10px;
+     align-content: center;
+     justify-content: space-around;  
+ }
+
+@media(max-width: 768px) {
+    .heading{
+        font-size: 250%;
+    }
+    .heading-sm{
+        font-size: 190%;
+    }
+    .two-col{
+        width: 100%;
+        padding: 0;
+        text-align: left;
+
+    }
+}
+
+
 
 
 
