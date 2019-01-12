@@ -201,6 +201,8 @@ body, html{
     display: flex; 
     margin-top: 0;
     justify-content: flex-end;
+    
+    transform: translateX(-50%) translateY(-50%);
 }
 
 nav{
@@ -225,6 +227,19 @@ nav > ul > li {
     padding: 10px;
   }
 
+.underline-hover::after {
+    content: '';
+    display: block;
+    transition: width .3s;
+    width: 0;
+    height: 2px;
+}
+
+.underline-hover:hover::after {
+    width: 100%;
+   transition: width .3s;
+}
+  
 .parallax1{
     background: url(../img/printer.jpg);
     min-height: 100%;
@@ -303,7 +318,7 @@ div.parallax2{
 
  .product-holder{
     width: 90%;
-    height: 70%;
+    height: 90%;
     background: #ccc;
     z-index: 0;
     margin: 0 auto;
@@ -313,13 +328,37 @@ div.parallax2{
 .product-img{
     width: 37%;
     margin-left: 3%;
-    margin-top: 5%; 
+    margin-top: 5%;
+    border: 3px solid grey;
+
+}
+
+.thumbnails-properties{
+    margin-left: 6%;
 }
 
 .product-info{
     font-family: 'Anton', sans-serif;
     margin-left: 20%;
     color: black;
+    display: flex;
+    display:inline;
+}
+
+.p-product-info{
+ align-items: center; 
+
+}
+
+.imgStyle{
+    height: 10%;
+    width: 10%;
+    border: 3px solid grey;
+}
+
+.rotate-elephant{
+    transform: rotate(100deg);
+
 }
 
 .sm-logo{

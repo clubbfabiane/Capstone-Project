@@ -5,7 +5,7 @@
             <meta http-equiv="X-UA-Compatible" content="ie=edge">
             <title>STL 3D Printing</title>
             <link rel="stylesheet" type="text/css" href="../css/style.css">
-            <link href="https://fonts.googleapis.com/css?family=Galdeano|News+Cycle|Oswald|Source+Code+Pro" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Galdeano|News+Cycle|Oswald|Source+Code+Pro|Anton" rel="stylesheet">
             <link rel="stylesheet" type="text/css" src="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     </head>
@@ -16,13 +16,39 @@
         </div>     
         <div class="product-holder">
                 <div>
-                        <img src="../img/elephant.jpg"  class="product-img" alt="Elephant"/>  
+                        <img src="../img/elephant.jpg"  id="mainImage" class="product-img" alt="Elephant"/>  
+                        <br/>
+                        <div id="thumbnails" class="thumbnails-properties" onClick="changeImage(event)">
+                        <img src=../img/elephant-down.jpg class="imgStyle" alt=""/>
+                        <img src=../img/elephant-front.jpg class="imgStyle" alt=""/>
+                        <img src=../img/elephant-side.jpg class="imgStyle" alt=""/>
+                        </div>
                 </div>
+
                 <div class="product-info">
-                        <p> product information</p>
+                        <p class="p-product-info"> product information</p>
                 </div>
         </div>
-        
+    <script type="text/javascript">
+     var images = document.getElementById("thumbnails").getElementsByTagName("img");
+for(var i=0; i<images.length; i++){
+                images[i].onmouseover = function(){
+                        this.style.cursor = 'hand';
+                        this.style.borderColor = 'orange';
+                }
+                images[i].onmouseout = function(){
+                        this.style.cursor = 'pointer';
+                        this.style.borderColor = 'grey';
+                }
+}
+
+        function changeImage(event){
+                var targetElement = event.target || event.srcElement;
+                        if(targetElement.tagName == "IMG"){
+                                document.getElementById("mainImage").src = targetElement.getAttribute("src");
+                        }
+        }
+        </script>    
        
 
    </body>
