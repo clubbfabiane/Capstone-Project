@@ -201,23 +201,14 @@ body, html{
     display: flex; 
     margin-top: 0;
     justify-content: flex-end;
-    
-    transform: translateX(-50%) translateY(-50%);
 }
 
 nav{
-    color: white;
-    font-size: 1rem;
+    display: flex;
     list-style: none;
     position:fixed;
     background-color:transparent;
-    z-index: 2;
-}
-
-nav a:hover{
-    text-decoration: none;
-    display: block;
-    color: white;
+    z-index: 2; 
 }
 
 nav > ul > li {
@@ -227,19 +218,45 @@ nav > ul > li {
     padding: 10px;
   }
 
-.underline-hover::after {
-    content: '';
-    display: block;
-    transition: width .3s;
-    width: 0;
-    height: 2px;
+  nav > ul > li > a{
+    position: relative;
+    color: white;
+    font-weight: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
 }
 
-.underline-hover:hover::after {
-    width: 100%;
-   transition: width .3s;
+a{
+    color: white;
+    text-decoration: none;
 }
-  
+
+a:hover,
+a:active {
+  color: white;
+}
+
+nav > ul > li > a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: -2px;
+    left: 0;
+    background: linear-gradient(to right, #fff 49%,#ffffff05 46%);
+    background-size: 200%;
+    background-position: 100% 0;
+    transition: all 0.3s ease 0s;
+    overflow: hidden;
+}
+
+a:hover:before, 
+a:active:before {
+  background-position: 0 0;
+}
+
+
+
 .parallax1{
     background: url(../img/printer.jpg);
     min-height: 100%;
@@ -309,9 +326,8 @@ div.parallax2{
 
 .two-col{
     float: left;
-    width: 42%;
+    width: 40%;
     padding: 0 4%;
-    text-align: left;
 }
 
  /**PRODUCTS**/
@@ -323,14 +339,13 @@ div.parallax2{
     z-index: 0;
     margin: 0 auto;
     margin-top: 8%;
+    padding-top: 5%;
 }
 
 .product-img{
-    width: 37%;
-    margin-left: 3%;
+    width: 100%;
     margin-top: 5%;
     border: 3px solid grey;
-
 }
 
 .thumbnails-properties{
@@ -339,26 +354,21 @@ div.parallax2{
 
 .product-info{
     font-family: 'Anton', sans-serif;
-    margin-left: 20%;
     color: black;
-    display: flex;
-    display:inline;
+    
 }
 
 .p-product-info{
- align-items: center; 
-
+    font-family: 'Lato', sans-serif;
+    color:black;
+    padding: 0 4%;
+    text-align: left;
 }
 
 .imgStyle{
-    height: 10%;
-    width: 10%;
+    height: 30%;
+    width: 30%;
     border: 3px solid grey;
-}
-
-.rotate-elephant{
-    transform: rotate(100deg);
-
 }
 
 .sm-logo{
@@ -412,7 +422,11 @@ section{
     }
 
     .sm-logo{ 
-        width: 7%;
+        width: 15%;
+    }
+
+    .product-img{
+        width: 80%;
     }
 
    
