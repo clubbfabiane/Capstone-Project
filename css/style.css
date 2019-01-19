@@ -1,199 +1,24 @@
+/** position absolute: doesn't stay in the flow, won't move because the other elements have moved*/
 
-/**old
-body {
-    font-family: 'Galdeano', sans-serif;
-    font-size: 1rem;
-    line-height: 1.5;
-    margin: 0 3% 0 3%;
-  }
-
-  /**NAV*
-.container-nav{
-    width: 100%;
-    display: flex; 
-    padding-left: 1rem;
-    padding-right:1rem;
-    margin-top: 20px;
-    justify-content: flex-end;
-}
-nav{
-    font-family: 'Galdeano', sans-serif;
-    color: white;
-    list-style: none;
-    position:fixed;
-    background-color:transparent;
-    z-index: 2;
-}
-
-nav a:hover{
-    text-decoration: none;
-    display: block;
-    color: white;
-}
-
-nav > ul > li {
-    position: relative;
-    display: inline;
-    list-style: none;
-    padding: 10px;
-  }
-  
- /**HOME*
- 
- .home-info{
-     display: flex;
-     width:100%;
-     height: 100vh;
-     height: auto;
-     z-index: 0;
- }
-
-.video{
-    position: absolute;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-}
-
-.logo-wrap{
-    position: absolute;
-    display: flex;
-    z-index:500;   
-}
-
-.logo{
-    align-content: flex-start;
-    width: 20%; 
-    height: 20%;  
-    margin-left: 100%;
-    margin-top: 10%;
-}
-
-.title-wrap{
-    display: flex;
-}
-
-.title-home{
-    font-family: 'News Cycle', sans-serif;
-    color:white;
-    font-size:3rem;
-   
-    font-weight:bold;
-    justify-content: flex-start;
-    z-index: 10;
-    top: 20%;
-    left: 0%;
-    margin:0;
-}
-
-.subtitle-wrap{
-    display: flex;
-}
-
-.subtitle-home {
-    font-family: 'Galdeano', sans-serif;
-    color: white;
-    font-size: 2rem;
-    position: absolute;
-    width: 500px;
-    justify-content: flex-start;
-    top: 60%;
-    left:30%;
-    margin: 0;
-}
-
-.header-subtitle{
-    position: absolute;
-    z-index: 2;
-    margin-left: 200px;
-    margin-top: -10px;
-    font-weight:normal;
-}
-
-/**PRODUCTS*
-.div-feature{
-    background:#707070; 
- } 
- 
- .product-row{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin: auto;
-    padding: 0;
-}
-
-.product-card{
-    width: 28%;
-    background: white;
-}
-
-/**SINGLE PRODUCT INFO*
-.feature-single-product{
-    background:#707070;
-}
-
-.feature-single-product-card{
-    background:white;
-    margin: 60px; 
-}
-
-.img-products{
-    width: 60%;
-}
-
-/**ABOUT ME*
-
-.p-about{
-    float: left;
-    padding-top:3%;
-    width:30%;
-    display: inline;
-}
-
-.img-mike{
-    width: 15%;
-    float:left;
-    padding: 2%;
-}
-
-/*CONTACT*
-.social-media-row{
-   clear: both;
-    background: #d1e0e0;
-    flex-direction: row;
-}
-
-.img-social-media{
-    width: 3%;
-    height: 3%;
-    padding: 10px;
-    flex-direction: row;
-    justify-content: space-around;  
-}
-**/
 
 body, html{
-    height: 100%;
+    height: 100%;/**will use percentage so it is relative to the parent element*/
     margin-top: 0;
     margin: 0, 1%;
-    font-family: 'Staatliches', cursive;
+    font-family: 'Lato', sans-serif;
     color: white;
-    line-height: 1.5em;
+    line-height: 1.5em; /**relative to the parent*/
     text-align: left;
     background-color: #323232;
 }
 
-.logo-wrap{
-    display: flex;  
+h3{
+    margin-left: 30%;
 }
-
 .logo{
-    justify-content: center;
-    margin-top: 15%;
-    margin-left: 60%;
-    width: 48%; 
-    height: 40%;    
+    align-items: center;
+    height: 25vh;
+    margin-bottom: 100%;
 }
 
 .container-nav{
@@ -207,15 +32,27 @@ nav{
     display: flex;
     list-style: none;
     position:fixed;
-    background-color:transparent;
+    background-color: rgba(192,192,192,0.5);
     z-index: 2; 
+    
+}
+
+.nav-background{
+    background-color: #ccc;
+    opacity: 0.5;
+    z-index: 1;
+    display:flex;
+    position: fixed
 }
 
 nav > ul > li {
+    font-size: 2rem;
+    color: white;
     position: relative;
     display: inline;
     list-style: none;
     padding: 10px;
+    opacity: 1;
   }
 
   nav > ul > li > a{
@@ -241,11 +78,11 @@ nav > ul > li > a:before {
     position: absolute;
     width: 100%;
     height: 3px;
-    bottom: -2px;
-    left: 0;
+    bottom: -1px;
+    /**left: 0;*/
     background: linear-gradient(to right, #fff 49%,#ffffff05 46%);
-    background-size: 200%;
-    background-position: 100% 0;
+    background-size: 200%; /**size of the underline not in hover*/
+    background-position: 100% 4px;
     transition: all 0.3s ease 0s;
     overflow: hidden;
 }
@@ -255,29 +92,29 @@ a:active:before {
   background-position: 0 0;
 }
 
-
+/**parallax is where I have the static images*/
 
 .parallax1{
     background: url(../img/printer.jpg);
     min-height: 100%;
     display: flex;
-    top: 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    background-size: contain;
+    background-attachment: fixed;
 } 
 
 .heading{
     color: #fff;
-    position: absolute;
     font-family: 'Anton', sans-serif;
     text-align: center;
     font-size: 4.5rem;
-    margin-top: 20%;
-    margin-left: 30%;
     text-transform: uppercase;
     text-shadow: 0 0 5px #000;
 }
 
 .heading-sm{
-    position: absolute;
     font-size: 1.2rem;
     text-shadow: 0 0 10px #000;
     margin-top: 7%;
@@ -287,10 +124,9 @@ a:active:before {
 
 div.parallax2{
     background: url(../img/dinos.jpg);
-    min-height: 60%;
+    min-height: 90%;
     background-size: contain;
     background-attachment: fixed;
-    background-repeat: none;
 }   
 
 .heading-sm-dino{
@@ -302,18 +138,33 @@ div.parallax2{
     margin-left: 10%;
     font-weight: normal;
     justify-content: center;
+    background-repeat: none;
 }
 
 .parallax3{
     background: url(../img/spools.jpg);
-    background-size: 400px;
-    background: cover;
-    min-height: 60%;
-}   
+    min-height: 90%;
+    background-size: contain;
+    background-attachment: fixed;
+} 
+
+.heading-sm-spool{
+    position: absolute;
+    color: white;
+    font-size: 4rem;
+    text-shadow: 0 0 10px #000;
+    margin-top: 7%;
+    margin-left: 10%;
+    font-weight: normal;
+    justify-content: center;
+    background-repeat: none;
+}
 
 .parallax4{
-    min-height:70%;
     background: url(../img/mike.jpg);
+    min-height:90%;
+    background-size: contain;
+    background-attachment: fixed;
 }   
 
 .parallax1, .parallax2, .parallax3, .parallax4{
@@ -321,7 +172,7 @@ div.parallax2{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: fixed; /**makes background fixed*/
 }
 
 .two-col{
@@ -355,7 +206,6 @@ div.parallax2{
 .product-info{
     font-family: 'Anton', sans-serif;
     color: black;
-    
 }
 
 .p-product-info{
@@ -363,6 +213,22 @@ div.parallax2{
     color:black;
     padding: 0 4%;
     text-align: left;
+}
+
+.products-sale{
+    display:flex;
+    flex-direction: columns;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 4%;
+    overflow: hidden;
+}
+
+.img-product-section{
+    width: 320px;
+    height: 240px;
+    border: 3px solid grey;
+    margin: 1%;
 }
 
 .imgStyle{
@@ -382,16 +248,18 @@ div.parallax2{
     }
 
 section{
+  
     overflow: auto;
     padding: 20%, 50%; 
     margin-left: 2%;
+    font-family: 'Lato', sans-serif;
 }
 
 .dark{
     overflow: auto;
     padding: 50px, 80px;
+    color: #fff;
     background-color: #323232;
-    color: #ccc;
 }
 
 .social-media-row{
@@ -402,18 +270,44 @@ section{
  
  .img-social-media{
     width: 20%;
-    margin-left: 10%;
+    margin-left: 30%;
  }
 
 
 @media(max-width: 768px) {
     .heading{
-        font-size: 250%;
+        font-size: 0.7rem;
+        font-family: 'Lato', sans-serif;
+        line-height: 0.5rem;
+        margin: 2%;
+        
     }
 
     .heading-sm{
-        font-size: 190%;
+        font-size: 0.7rem;
+        font-family: 'Lato', sans-serif;
+        line-height: 0.5rem;
     }
+
+
+   /** .heading{
+        color: #fff;
+       
+        text-align: center;
+        font-size: 4.5rem;
+        text-transform: uppercase;
+        text-shadow: 0 0 5px #000;
+    }
+    
+    .heading-sm{
+        font-size: 1.2rem;
+      
+        text-shadow: 0 0 10px #000;
+        margin-top: 7%;
+        font-weight: normal;
+        justify-content: center;
+    } */
+
 
     .two-col{
         width: 100%;
@@ -423,11 +317,33 @@ section{
 
     .sm-logo{ 
         width: 15%;
+        
     }
 
     .product-img{
-        width: 80%;
+        width: 40%;
+        margin-top: 15%;
+    margin-left: 30%;
+    width: 30%; 
+    height: 40%;  
     }
+
+    .logo{
+        align-items: center;
+        height: 10vh;
+        margin-bottom: 100%;
+    }
+
+
+    .container-nav{
+        height: 7%;
+        font-size: 0.2rem;
+        width: 100%;
+        display: flex; 
+        margin-top: 0;
+        justify-content: flex-end;
+    }
+    
 
    
 
