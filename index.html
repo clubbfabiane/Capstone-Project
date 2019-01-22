@@ -16,15 +16,16 @@
                 <nav  class="container-nav">
                     <ul>
                         <li><a href="#home">Home</a></li>
-                        <li><a href="#products">Products</a></li>
                         <li><a href="#about">About</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#aboutme">About Me</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
         </div>
 
        
-        <div class="parallax1">
+        <div class="parallax1" id="home">
             <div class="heading">
                 STL 3D Printing
                 <h2 class="heading-sm">Printing Services & Sales</h2>
@@ -34,14 +35,13 @@
             </div>
         </div>
 
-        
-
-        <section id="about">
+        <section>
+            <div  id="about" class="blank-div"></div>
             <div class="two-col">
-                <p>What is 3D printing? <br>3D Printing is the manufacturing process that creates a physical object from a digital design. There are different 3D printing technologies and materials you can print with, but all are based on the same principle: a digital model is turned into a solid three-dimensional physical object by adding material layer by layer. Every 3D print starts as a digital 3D design file – like a blueprint – for a physical object. Trying to print without a design file is like trying to print a document on a sheet of paper without a text file.This design file is sliced into thin layers which is then sent to the 3D printer. 
+                <h3>What is 3D printing?</h3> <p>3D Printing is the manufacturing process that creates a physical object from a digital design. There are different 3D printing technologies and materials you can print with, but all are based on the same principle: a digital model is turned into a solid three-dimensional physical object by adding material layer by layer. Every 3D print starts as a digital 3D design file – like a blueprint – for a physical object. Trying to print without a design file is like trying to print a document on a sheet of paper without a text file.This design file is sliced into thin layers which is then sent to the 3D printer. 
             </div>
             <div class="two-col">
-                <p>What do we print? <br>Thanks to open source we can program our printers to create almost any object. I have printed parts for my printers, office supplies, functional prints such as light switches and brackets to hold up fences. </p>
+                <h3>What do we print?</h3><p>Thanks to open source we can program our printers to create almost any object. I have printed parts for my printers, office supplies, functional prints such as light switches and brackets to hold up fences. </p>
             </div>
         </section>
 
@@ -51,19 +51,21 @@
             </div>
         </div>
 
-        <section class="dark" id="products">
-            <p>Our Products<br>Click each product for more information</p>
-            <div class="products-sale">
-                <img src="img/butterfly.jpg" class="img-product-section"/>
-                <a href="http://www.google.com" target="_blank">
-                    <img src="img/elephant3.jpg" class="img-product-section">
-                </a>
-                <img src="img/heart.jpg" class="img-product-section"/>
-                <img src="img/vase.jpg" class="img-product-section"/>
-                <img src="img/deer.jpg" class="img-product-section"/>
-                <img src="img/dinosaur.jpg" class="img-product-section"/>
-            </div>
-                 
+        <section>
+            <div class="blank-div" id="products"></div>
+            <div  class="dark" >
+            <h3>Products</h3><p>Click each product for more information.</p>
+                <div class="products-sale">
+                    <img src="img/butterfly.jpg" class="img-product-section"/>
+                    <a href="http://www.google.com" target="_blank">
+                        <img src="img/elephant3.jpg" class="img-product-section">
+                    </a>
+                    <img src="img/heart.jpg" class="img-product-section"/>
+                    <img src="img/vase.jpg" class="img-product-section"/>
+                    <img src="img/deer.jpg" class="img-product-section"/>
+                    <img src="img/dinosaur.jpg" class="img-product-section"/>
+                </div>
+            </div>   
         
         </section>
 
@@ -74,6 +76,7 @@
         </div>
         
         <section class="dark">
+                <div class="blank-div" id="aboutme"></div>
             <h3>About Me</h3>
             <div>
                 <p>My name is Mike and I have been developer for about 20 years. 3D printing became a hobby which turned into a passion. This passion is why I started a 3D printing farm as well as sales and services.</p>
@@ -83,8 +86,8 @@
 
         <div class="parallax4">
         </div>
-
-        <div class="dark" id="contact">
+            <div class="blank-div" id="contact"></div>
+        <div class="dark" >
                 <div class="social-media-row">
                         <a href="https://twitter.com/stl3dprinting" target="_blank"><img class="img-social-media" src="img/twitter.png" alt="Twitter Logo"></a>
                         <a href= "https://instagram.com/stl3dprinting" target="_blank"><img class="img-social-media" src="img/instagram.png" alt="Instagram Logo"></a>
@@ -93,6 +96,7 @@
                         <a href="https://github.com/clubbfabiane/Capstone-Project" target="_blank"><img class="img-social-media" src="img/github.png" alt="Github Logo"></a>
                 </div>
             </div>
+ <iframe id="JotFormIFrame-90207523140141" onload="window.parent.scrollTo(0,0)" allowtransparency="true" allowfullscreen="true" allow="geolocation; microphone; camera" src="https://form.jotform.com/90207523140141" frameborder="0" style="width: 1px; min-width: 100%; height:539px; border:none;" scrolling="no" > </iframe> <script type="text/javascript"> var ifr = document.getElementById("JotFormIFrame-90207523140141"); if(window.location.href && window.location.href.indexOf("?") > -1) { var get = window.location.href.substr(window.location.href.indexOf("?") + 1); if(ifr && get.length > 0) { var src = ifr.src; src = src.indexOf("?") > -1 ? src + "&" + get : src + "?" + get; ifr.src = src; } } window.handleIFrameMessage = function(e) { if (typeof e.data === 'object') { return; } var args = e.data.split(":"); if (args.length > 2) { iframe = document.getElementById("JotFormIFrame-" + args[(args.length - 1)]); } else { iframe = document.getElementById("JotFormIFrame"); } if (!iframe) { return; } switch (args[0]) { case "scrollIntoView": iframe.scrollIntoView(); break; case "setHeight": iframe.style.height = args[1] + "px"; break; case "collapseErrorPage": if (iframe.clientHeight > window.innerHeight) { iframe.style.height = window.innerHeight + "px"; } break; case "reloadPage": window.location.reload(); break; case "loadScript": var src = args[1]; if (args.length > 3) { src = args[1] + ':' + args[2]; } var script = document.createElement('script'); script.src = src; script.type = 'text/javascript'; document.body.appendChild(script); break; case "exitFullscreen": if (window.document.exitFullscreen) window.document.exitFullscreen(); else if (window.document.mozCancelFullScreen) window.document.mozCancelFullScreen(); else if (window.document.mozCancelFullscreen) window.document.mozCancelFullScreen(); else if (window.document.webkitExitFullscreen) window.document.webkitExitFullscreen(); else if (window.document.msExitFullscreen) window.document.msExitFullscreen(); break; } var isJotForm = (e.origin.indexOf("jotform") > -1) ? true : false; if(isJotForm && "contentWindow" in iframe && "postMessage" in iframe.contentWindow) { var urls = {"docurl":encodeURIComponent(document.URL),"referrer":encodeURIComponent(document.referrer)}; iframe.contentWindow.postMessage(JSON.stringify({"type":"urls","value":urls}), "*"); } }; if (window.addEventListener) { window.addEventListener("message", handleIFrameMessage, false); } else if (window.attachEvent) { window.attachEvent("onmessage", handleIFrameMessage); } </script>
 
         
     </body>
